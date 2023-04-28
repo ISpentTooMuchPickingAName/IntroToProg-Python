@@ -71,9 +71,9 @@ while (True):
         REMOVE = int(input('Enter the desired row you want to remove:')) - 1  # User selects what row they want deleted
         myFile.seek(0)  # Set pointer to 0
         myFile.truncate()  # Truncate
-        for number, line in enumerate(lines):  # Enumerate every line on the list
+        for number, strData in enumerate(strData):  # Enumerate every line on the list
             if number not in [REMOVE]:  # Erase a line number equal to REMOVE
-                myFile.write(line)  # Write new data to file
+                myFile.write(strData)  # Write new data to file
         # Below is code recycled from option 1
         print("Your have altered your data, this is the current data:\n")
         myFile = open(objFile, "r")
